@@ -1,0 +1,8 @@
+/* ==========================================================================
+   Preloader Styles — Additional overrides
+   ========================================================================== */
+
+/* Light mode: preloader still uses dark bg */
+[data-theme="light"] #preloader .preloader__bg {
+  background: #0A0A0F;
+}

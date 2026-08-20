@@ -1,0 +1,13 @@
+# Render Infrastructure as Code (Blueprint) for Deepak Polisetti Portfolio
+
+services:
+  - type: static
+    name: deepak-polisetti
+    plan: free
+    buildCommand: npm --prefix website install && npm --prefix website run build
+    publishPath: website/dist
+    pullRequestPreviewsEnabled: true
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

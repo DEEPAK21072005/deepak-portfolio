@@ -1,0 +1,268 @@
+/* ==========================================================================
+   Layout
+   Structural primitives for page composition. No component styling.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Container — horizontally centered content wrapper
+   -------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--container-xl);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.container--sm {
+  max-width: var(--container-sm);
+}
+
+.container--md {
+  max-width: var(--container-md);
+}
+
+.container--lg {
+  max-width: var(--container-lg);
+}
+
+.container--xl {
+  max-width: var(--container-xl);
+}
+
+.container--2xl {
+  max-width: var(--container-2xl);
+}
+
+.container--full {
+  max-width: none;
+}
+
+/* --------------------------------------------------------------------------
+   Section — vertical page regions
+   -------------------------------------------------------------------------- */
+.section {
+  padding-block: var(--section-spacing-y);
+}
+
+.section--compact {
+  padding-block: var(--space-12);
+}
+
+.section--spacious {
+  padding-block: clamp(var(--space-20), 10vw, var(--space-32));
+}
+
+.section--bg-secondary {
+  background-color: var(--color-bg-secondary);
+}
+
+.section--bg-elevated {
+  background-color: var(--color-bg-elevated);
+}
+
+/* --------------------------------------------------------------------------
+   Page spacing — outer page shell
+   -------------------------------------------------------------------------- */
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.page__main {
+  flex: 1 0 auto;
+  padding-block: var(--page-padding-y);
+}
+
+.page__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-spacing-y);
+}
+
+/* --------------------------------------------------------------------------
+   Grid helpers
+   -------------------------------------------------------------------------- */
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.grid--gap-sm {
+  gap: var(--space-4);
+}
+
+.grid--gap-lg {
+  gap: var(--space-8);
+}
+
+.grid--gap-xl {
+  gap: var(--space-12);
+}
+
+.grid--cols-1 {
+  grid-template-columns: 1fr;
+}
+
+.grid--cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--auto-fit-sm {
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.grid--auto-fit-md {
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.grid--auto-fit-lg {
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+}
+
+.grid--align-center {
+  align-items: center;
+}
+
+.grid--align-start {
+  align-items: start;
+}
+
+.grid--align-end {
+  align-items: end;
+}
+
+/* --------------------------------------------------------------------------
+   Flex helpers
+   -------------------------------------------------------------------------- */
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.flex--col {
+  flex-direction: column;
+}
+
+.flex--row {
+  flex-direction: row;
+}
+
+.flex--wrap {
+  flex-wrap: wrap;
+}
+
+.flex--nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex--between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex--start {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.flex--end {
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.flex--align-center {
+  align-items: center;
+}
+
+.flex--align-start {
+  align-items: flex-start;
+}
+
+.flex--align-end {
+  align-items: flex-end;
+}
+
+.flex--justify-center {
+  justify-content: center;
+}
+
+.flex--justify-between {
+  justify-content: space-between;
+}
+
+.flex--justify-end {
+  justify-content: flex-end;
+}
+
+.flex--gap-sm {
+  gap: var(--space-2);
+}
+
+.flex--gap-md {
+  gap: var(--space-4);
+}
+
+.flex--gap-lg {
+  gap: var(--space-6);
+}
+
+.flex--gap-xl {
+  gap: var(--space-8);
+}
+
+.flex--1 {
+  flex: 1 1 0%;
+}
+
+.flex--auto {
+  flex: 1 1 auto;
+}
+
+.flex--none {
+  flex: none;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive layout adjustments
+   -------------------------------------------------------------------------- */
+@media (max-width: 48rem) {
+  :root {
+    --container-padding: var(--space-4);
+  }
+
+  .grid--cols-2,
+  .grid--cols-3,
+  .grid--cols-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --container-padding: var(--space-6); /* TODO: refine breakpoint padding */
+  }
+}
+
+@media (min-width: 64rem) {
+  :root {
+    --container-padding: var(--space-8); /* TODO: refine breakpoint padding */
+  }
+}

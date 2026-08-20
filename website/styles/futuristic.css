@@ -1,0 +1,530 @@
+/* ==========================================================================
+   Futuristic Styles — Project Atlas Ultra
+   Preloader, Custom Cursor, Section Themes, Glow FX, Glassmorphism
+   ========================================================================== */
+
+/* ── Preloader ── */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-preloader);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all;
+}
+
+.preloader__bg {
+  position: absolute;
+  inset: 0;
+  background: #0A0A0F;
+}
+
+.preloader__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.preloader__neural {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 0.5rem;
+}
+
+.preloader__net {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.preloader__line {
+  stroke: #00F5FF;
+  stroke-width: 1;
+  opacity: 0;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: drawLine 2s ease-in-out infinite;
+}
+
+@keyframes drawLine {
+  0% { opacity: 0; stroke-dashoffset: 200; }
+  20% { opacity: 0.7; }
+  60% { stroke-dashoffset: 0; opacity: 0.7; }
+  100% { opacity: 0; stroke-dashoffset: -200; }
+}
+
+.preloader__node {
+  fill: #00F5FF;
+  opacity: 0;
+  animation: nodeAppear 2s ease-in-out infinite;
+}
+
+@keyframes nodeAppear {
+  0% { opacity: 0; r: 2; }
+  50% { opacity: 1; r: 6; filter: drop-shadow(0 0 6px #00F5FF); }
+  100% { opacity: 0; r: 2; }
+}
+
+.preloader__name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: #F0F4FF;
+}
+
+.preloader__tagline {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: #00F5FF;
+  text-transform: uppercase;
+}
+
+.preloader__bar-wrapper {
+  width: 200px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 99px;
+  margin-top: 0.75rem;
+  overflow: hidden;
+}
+
+.preloader__bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #00F5FF, #8B5CF6);
+  border-radius: 99px;
+  transition: width 0.4s ease;
+  box-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+}
+
+.preloader__pct {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: #687080;
+  letter-spacing: 0.08em;
+}
+
+#preloader.preloader--done {
+  pointer-events: none;
+}
+
+/* ── Custom Cursor ── */
+* {
+  cursor: none !important;
+}
+
+@media (pointer: coarse) {
+  * { cursor: auto !important; }
+  .cursor-dot, .cursor-ring, .cursor-trail { display: none !important; }
+}
+
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: #00F5FF;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease, background 0.2s ease;
+  box-shadow: 0 0 10px rgba(0, 245, 255, 0.8);
+  will-change: transform;
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(0, 245, 255, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease, border-color 0.2s ease;
+  will-change: transform;
+}
+
+.cursor-trail {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: calc(var(--z-cursor) - 1);
+}
+
+/* Cursor hover states (applied via JS) */
+body.cursor-hover .cursor-dot {
+  width: 12px;
+  height: 12px;
+  background: #8B5CF6;
+  box-shadow: 0 0 16px rgba(139, 92, 246, 0.8);
+}
+
+body.cursor-hover .cursor-ring {
+  width: 54px;
+  height: 54px;
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+/* ── Prefers-reduced-motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .preloader__line,
+  .preloader__node,
+  .preloader__bar,
+  .cursor-dot,
+  .cursor-ring,
+  .cursor-trail,
+  .neural-canvas,
+  .hero__canvas-bg {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  * {
+    cursor: auto !important;
+  }
+
+  .cursor-dot,
+  .cursor-ring,
+  .cursor-trail {
+    display: none !important;
+  }
+}
+
+/* ── Section-specific Themes ── */
+
+/* Hero: Deep cosmic black with Three.js canvas */
+.hero {
+  background: #050508 !important;
+}
+
+/* About: Dark charcoal with cyan accent */
+.about {
+  background: linear-gradient(160deg, #0D0D14 0%, #0A0A0F 60%, #0D1020 100%) !important;
+  position: relative;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #00F5FF, transparent);
+}
+
+/* Experience: Deep navy with electric blue */
+.experience {
+  background: linear-gradient(160deg, #060B18 0%, #0A0E1A 60%, #08122A 100%) !important;
+  position: relative;
+}
+
+.experience::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #3B82F6, transparent);
+}
+
+/* Projects: Deep emerald forest */
+.projects {
+  background: linear-gradient(160deg, #020D08 0%, #011508 60%, #021A0C 100%) !important;
+  position: relative;
+}
+
+.projects::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #10B981, transparent);
+}
+
+/* Skills: Deep violet */
+.skills {
+  background: linear-gradient(160deg, #0A060F 0%, #0D0A1A 60%, #120A1E 100%) !important;
+  position: relative;
+}
+
+.skills::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #8B5CF6, transparent);
+}
+
+/* Certifications: Dark amber/gold */
+.certifications {
+  background: linear-gradient(160deg, #0F0900 0%, #1A1000 60%, #1F1200 100%) !important;
+  position: relative;
+}
+
+.certifications::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #F59E0B, transparent);
+}
+
+/* Achievements: Dark with pink accent */
+.achievements {
+  background: linear-gradient(160deg, #0F0810 0%, #14081A 60%, #160A1C 100%) !important;
+  position: relative;
+}
+
+.achievements::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #EC4899, transparent);
+}
+
+/* Contact: Glassmorphism over gradient */
+.contact {
+  background: linear-gradient(160deg, #06080F 0%, #0A0C18 60%, #0C0E22 100%) !important;
+  position: relative;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #00F5FF, transparent);
+}
+
+/* ── Glassmorphism Card ── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+}
+
+/* ── Section Label (accent eyebrow) ── */
+.section__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-3);
+}
+
+.section__label::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--color-accent);
+  opacity: 0.7;
+}
+
+.section__heading {
+  font-family: var(--font-display);
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tighter);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-4);
+}
+
+/* ── Global body in dark mode ── */
+[data-theme="dark"] body,
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+/* ── Neon Text Gradient ── */
+.text-neon-cyan {
+  background: linear-gradient(135deg, #00F5FF, #00AACC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-neon-violet {
+  background: linear-gradient(135deg, #8B5CF6, #6D28D9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-neon-emerald {
+  background: linear-gradient(135deg, #10B981, #059669);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-neon-gold {
+  background: linear-gradient(135deg, #F59E0B, #D97706);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Noise Grain Overlay ── */
+.noise-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* ── 3D Tilt Card base ── */
+.tilt-card {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  transition: box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+/* ── Scroll-reveal base states ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+}
+
+.reveal.reveal--left {
+  transform: translateX(-40px);
+}
+
+.reveal.reveal--right {
+  transform: translateX(40px);
+}
+
+.reveal.reveal--visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Animated border gradient ── */
+@keyframes borderRotate {
+  from { --border-angle: 0deg; }
+  to { --border-angle: 360deg; }
+}
+
+/* ── Scroll Progress Bar (top of page) ── */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, #00F5FF, #8B5CF6, #10B981);
+  z-index: calc(var(--z-sticky) + 1);
+  transition: width 0.1s linear;
+  box-shadow: 0 0 8px rgba(0, 245, 255, 0.6);
+}
+
+/* ── Navbar dark overrides ── */
+[data-theme="dark"] .navbar--scrolled {
+  background-color: rgba(10, 10, 15, 0.85) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* ── Theme toggle button ── */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: var(--transition-all);
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  box-shadow: 0 0 10px var(--color-accent-muted);
+}
+
+.theme-toggle .icon-sun,
+.theme-toggle .icon-moon {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+[data-theme="dark"] .theme-toggle .icon-sun { opacity: 1; transform: rotate(0deg); }
+[data-theme="dark"] .theme-toggle .icon-moon { opacity: 0; position: absolute; }
+[data-theme="light"] .theme-toggle .icon-sun { opacity: 0; position: absolute; }
+[data-theme="light"] .theme-toggle .icon-moon { opacity: 1; transform: rotate(0deg); }
+
+/* ── Glow utility classes ── */
+.glow-cyan { box-shadow: var(--glow-cyan); }
+.glow-violet { box-shadow: var(--glow-violet); }
+.glow-emerald { box-shadow: var(--glow-emerald); }
+.glow-gold { box-shadow: var(--glow-gold); }
+
+/* ── Floating animation ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(0, 245, 255, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(0, 245, 255, 0.7), 0 0 60px rgba(0, 245, 255, 0.2); }
+}
+
+/* ── Hero Canvas ── */
+.hero__canvas-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ── Light mode fixes for sections ── */
+[data-theme="light"] .about,
+[data-theme="light"] .experience,
+[data-theme="light"] .projects,
+[data-theme="light"] .skills,
+[data-theme="light"] .certifications,
+[data-theme="light"] .achievements,
+[data-theme="light"] .contact {
+  background: var(--color-bg-primary) !important;
+}
+
+[data-theme="light"] .about::before,
+[data-theme="light"] .experience::before,
+[data-theme="light"] .projects::before,
+[data-theme="light"] .skills::before,
+[data-theme="light"] .certifications::before,
+[data-theme="light"] .achievements::before,
+[data-theme="light"] .contact::before {
+  opacity: 0.3;
+}
+
+[data-theme="light"] .glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: var(--color-border);
+}

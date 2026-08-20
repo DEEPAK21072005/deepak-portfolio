@@ -1,0 +1,235 @@
+/* ==========================================================================
+   Certifications Component — Amber Gold Theme
+   ========================================================================== */
+
+.certifications {
+  padding-block: var(--section-spacing);
+  position: relative;
+  overflow: hidden;
+}
+
+.certifications__inner {
+  max-width: var(--container-xl);
+  margin-inline: auto;
+}
+
+.certifications__header {
+  margin-bottom: var(--space-8);
+}
+
+.certifications__subheading {
+  font-size: var(--font-size-base);
+  color: var(--color-text-muted);
+  max-width: 56ch;
+  line-height: var(--leading-relaxed);
+  margin-top: var(--space-2);
+}
+
+.certifications__controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.certifications__search-wrapper {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+}
+
+.certifications__search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.certifications__search {
+  width: 100%;
+  padding: 10px 16px 10px 42px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.certifications__search:focus {
+  border-color: #F59E0B;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.2);
+}
+
+.certifications__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.certifications__filter-pill {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.certifications__filter-pill:hover,
+.certifications__filter-pill.active {
+  border-color: #F59E0B;
+  color: #F59E0B;
+  background: rgba(245, 158, 11, 0.1);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
+}
+
+.certifications__pill-count {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+/* Grid & Cards */
+.certifications__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-5);
+}
+
+.certifications__card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-4);
+  transition: all 0.3s ease;
+
+}
+
+.certifications__card:hover {
+  border-color: #F59E0B;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(245, 158, 11, 0.15);
+  transform: translateY(-4px);
+}
+
+.certifications__issuer-badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #F59E0B;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.certifications__card-title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: var(--leading-snug);
+}
+
+.certifications__view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: #F59E0B;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.certifications__view-btn:hover {
+  color: #FBBF24;
+}
+
+/* Modal */
+.cert-modal {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.cert-modal--open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cert-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+.cert-modal__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 900px;
+  height: 80vh;
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.cert-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  line-height: 1;
+}
+
+.cert-modal__title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  padding-right: 40px;
+}
+
+.cert-modal__body {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.cert-modal__body iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}

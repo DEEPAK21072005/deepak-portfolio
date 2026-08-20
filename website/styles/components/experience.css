@@ -1,0 +1,232 @@
+/* ==========================================================================
+   Experience Component — Deep Navy + Electric Blue Timeline
+   ========================================================================== */
+
+.experience {
+  padding-block: var(--section-spacing);
+  position: relative;
+  overflow: hidden;
+}
+
+.experience__inner {
+  max-width: var(--container-xl);
+  margin-inline: auto;
+}
+
+.experience__header {
+  margin-bottom: var(--space-12);
+}
+
+.experience__subtitle {
+  font-size: var(--font-size-base);
+  color: var(--color-text-muted);
+  max-width: 56ch;
+  line-height: var(--leading-relaxed);
+  margin-top: var(--space-2);
+}
+
+/* ── Timeline ── */
+.experience__timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.experience__timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, #3B82F6, #8B5CF6, transparent);
+  transform: translateX(-50%);
+}
+
+.experience__card {
+  position: relative;
+  width: calc(50% - var(--space-10));
+  align-self: flex-start;
+}
+
+.experience__card:nth-child(odd) {
+  margin-right: auto;
+}
+
+.experience__card:nth-child(even) {
+  margin-left: auto;
+}
+
+.experience__card-inner {
+  padding: var(--space-6);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.experience__card-inner:hover {
+  border-color: #3B82F6;
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
+  transform: translateY(-4px);
+}
+
+/* Timeline dot connector */
+.experience__connector {
+  position: absolute;
+  top: 24px;
+}
+
+.experience__card:nth-child(odd) .experience__connector {
+  right: calc(-2 * var(--space-10) - 1px);
+  transform: translateX(50%);
+}
+
+.experience__card:nth-child(even) .experience__connector {
+  left: calc(-2 * var(--space-10) + 1px);
+  transform: translateX(-50%);
+}
+
+.experience__dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #3B82F6;
+  border: 2px solid #0A0E1A;
+  box-shadow: 0 0 14px #3B82F6, 0 0 28px rgba(59, 130, 246, 0.3);
+}
+
+/* ── Card Content ── */
+.experience__meta {
+  margin-bottom: var(--space-4);
+}
+
+.experience__company-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.experience__company {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: #3B82F6;
+}
+
+.experience__badge {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: var(--radius-full);
+  padding: 2px var(--space-3);
+  letter-spacing: 0.04em;
+}
+
+.experience__role {
+  font-family: var(--font-display);
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.experience__period {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+}
+
+.experience__description {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-4);
+}
+
+/* Impact list */
+.experience__impact {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.experience__impact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-snug);
+}
+
+.experience__impact-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #3B82F6;
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+/* Tech tags */
+.experience__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.experience__tag {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: #3B82F6;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 2px var(--space-3);
+}
+
+.experience__cert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: #3B82F6;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.experience__cert-link:hover {
+  border-bottom-color: #3B82F6;
+  color: var(--color-text-primary);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .experience__timeline::before {
+    left: 16px;
+  }
+
+  .experience__card {
+    width: 100%;
+    margin-left: 40px !important;
+    margin-right: 0 !important;
+  }
+
+  .experience__card:nth-child(odd) .experience__connector,
+  .experience__card:nth-child(even) .experience__connector {
+    left: -40px;
+    right: auto;
+    transform: none;
+  }
+}
