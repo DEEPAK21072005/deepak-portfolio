@@ -29,7 +29,7 @@ app.use(cors());
 app.use(express.json({ limit: '16kb' }));
 app.use(express.static(path.join(__dirname, 'dist')));
 
-// Keep local development behavior identical to Vercel's serverless endpoint.
+// Keep local development behavior aligned with the production contact API contract.
 app.post('/api/contact', contactHandler);
 
 app.use((req, res) => {

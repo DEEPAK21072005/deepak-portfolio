@@ -63,4 +63,4 @@ Premium, elegant, calm, intelligent, content-first.
 - SEO friendly
 - Maintainable
 - GitHub hosted
-- Vercel deployment
+- Render static-site deployment
