@@ -187,6 +187,13 @@ export const certifications = [
     category: 'Development',
     file: '/assets/certificates/JP-Morgan/Jp Moragan software engineering job simulation.pdf'
   },
+  {
+    id: 'jpmorgan-ib',
+    title: 'JP Morgan Investment Banking Job Simulation',
+    issuer: 'JP Morgan',
+    category: 'Other',
+    file: '/assets/internships/JP MORGAN INTERNSHIP CERTIFICATE.pdf'
+  },
 
   /* Accenture */
   {

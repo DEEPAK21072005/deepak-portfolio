@@ -74,7 +74,7 @@ export const ResumeData = {
         'Collaborated on practical solutions promoting corporate sustainability and environmental responsibility'
       ],
       technologies: ['Data Analytics', 'Sustainability Reporting', 'GHG Modeling', 'Excel', 'Energy Transition'],
-      certificate: '/assets/internships/Shell Green Skills certificate.pdf',
+      certificate: '/assets/internships/Shell internship.pdf',
       color: '#10B981',
       icon: 'Leaf'
     },
@@ -115,7 +115,7 @@ export const ResumeData = {
       technologies: ['Python', 'NLP', 'NLTK', 'scikit-learn', 'Pandas', 'Streamlit'],
       impact: '89%+ Classification Accuracy on multi-class emotional text benchmarks',
       github: 'https://github.com/DEEPAK21072005/Emotion-Detection-Using-NLP',
-      demo: 'https://emotion-lens-model.vercel.app/',
+      demo: 'https://emotion-lens-deepak.vercel.app',
       image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=600&auto=format&fit=crop'
     },
     {
@@ -213,10 +213,10 @@ export const ResumeData = {
         'Utilized client-side localStorage for instant data persistence with zero backend latency',
         'Built responsive transactions log with search, sort, and date-range filters'
       ],
-      technologies: ['JavaScript', 'HTML5', 'CSS3', 'Chart.js', 'LocalStorage'],
+      technologies: ['TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Chart.js', 'LocalStorage'],
       impact: '100% client-side privacy-first expense management with instant visual feedback',
       github: 'https://github.com/DEEPAK21072005/Expense-Tracker-App-',
-      demo: 'https://github.com/DEEPAK21072005/Expense-Tracker-App-',
+      demo: 'https://expense-tracker-pro-lime.vercel.app',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop'
     },
     {
@@ -241,11 +241,11 @@ export const ResumeData = {
     },
     {
       id: 'express-crud',
-      title: 'Modular Express REST API Engine',
+      title: 'NexusCRUD Pro — Enterprise RESTful Engine & Dashboard',
       category: 'web',
       categoryLabel: 'Web Development',
       featured: false,
-      tagline: 'Clean architecture RESTful backend service with centralized error handling.',
+      tagline: 'Clean architecture RESTful backend service with centralized error handling and real-time dashboard.',
       problem: 'Scalable backend services require robust architectural patterns for RESTful resource management and error handling.',
       solution: 'Architected a modular Express.js backend API featuring strict route validation, middleware pipeline, and clean JSON endpoints.',
       bullets: [
@@ -255,8 +255,8 @@ export const ResumeData = {
       ],
       technologies: ['Node.js', 'Express.js', 'REST APIs', 'JavaScript', 'Postman'],
       impact: 'Production-grade modular backend API boilerplate with robust validation',
-      github: 'https://github.com/DEEPAK21072005/express-crud-experiment',
-      demo: 'https://github.com/DEEPAK21072005/express-crud-experiment',
+      github: 'https://github.com/DEEPAK21072005/NexusCRUD-Pro',
+      demo: 'https://express-crud-experiment.vercel.app',
       image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=600&auto=format&fit=crop'
     },
     {
@@ -315,8 +315,8 @@ export const ResumeData = {
       ],
       technologies: ['Python', 'scikit-learn', 'NLP', 'TF-IDF', 'Pandas'],
       impact: '91% Precision on identifying fake and sensationalized news content',
-      github: 'https://github.com/DEEPAK21072005/Emotion-Detection-Using-NLP',
-      demo: 'https://github.com/DEEPAK21072005/Emotion-Detection-Using-NLP',
+      github: 'https://github.com/DEEPAK21072005/Fake-News-Detector',
+      demo: 'https://veritas-ai-murex.vercel.app',
       image: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=600&auto=format&fit=crop'
     },
     {
@@ -393,9 +393,89 @@ export const ResumeData = {
       ],
       technologies: ['React', 'Tailwind CSS', 'Framer Motion', 'Chart.js', 'Swiper.js', 'EmailJS'],
       impact: 'Google-quality aesthetic, sub-second load, 100% lighthouse compliance',
-      github: 'https://github.com/DEEPAK21072005',
+      github: 'https://github.com/DEEPAK21072005/deepak-portfolio',
       demo: '#',
       image: 'https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=600&auto=format&fit=crop'
+    },
+    {
+      id: 'blind-drop-x',
+      title: 'Blind Drop X — Official Promo Hub',
+      category: 'web',
+      categoryLabel: 'Web Development',
+      featured: true,
+      tagline: 'Zero-Knowledge Ephemeral Communication & APK Distribution Portal.',
+      problem: 'Users need secure, zero-knowledge ephemeral messaging with a clean, trustworthy APK download and promotional portal.',
+      solution: 'Engineered the official landing page and APK distribution platform for Blind Drop X, featuring zero-knowledge architecture details, responsive dark-mode UI, and secure APK download links.',
+      bullets: [
+        'Engineered responsive zero-knowledge landing page with interactive feature breakdowns',
+        'Implemented secure direct APK download pipeline and release version telemetry',
+        'Optimized with Vite and Tailwind CSS for instant sub-second load times'
+      ],
+      technologies: ['JavaScript', 'React', 'Tailwind CSS', 'Vite', 'Vercel'],
+      impact: 'High-conversion landing portal for privacy-first ephemeral communication',
+      github: 'https://github.com/DEEPAK21072005/blind-drop-x-promo',
+      demo: 'https://blind-drop-x-promo.vercel.app',
+      image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=600&auto=format&fit=crop'
+    },
+    {
+      id: 'komorebi-tasks',
+      title: 'Komorebi Tasks',
+      category: 'web',
+      categoryLabel: 'Web Development',
+      featured: true,
+      tagline: 'Mindful, precision-crafted productivity and task management web application.',
+      problem: 'Traditional task managers are cluttered and distracting, lacking mindful aesthetics and serene workflow organization.',
+      solution: 'Designed and engineered Komorebi Tasks — a minimalist, Japanese aesthetic-inspired task architecture combining serene minimalism, priority scheduling, and local persistence.',
+      bullets: [
+        'Built with minimalist Japanese design philosophy prioritizing focus and mental clarity',
+        'Integrated client-side state preservation with instant offline synchronization',
+        'Engineered keyboard shortcuts, custom priority tags, and clean completion micro-animations'
+      ],
+      technologies: ['React', 'Vite', 'Tailwind CSS', 'LocalStorage', 'Lucide Icons'],
+      impact: 'Distraction-free, mindful task management with sub-millisecond local latency',
+      github: 'https://github.com/DEEPAK21072005/komorebi-app',
+      demo: 'https://komorebi-tasks.vercel.app',
+      image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=600&auto=format&fit=crop'
+    },
+    {
+      id: 'saas-revenue-leakage',
+      title: 'SaaS Revenue Leakage & Subscription Lifecycle Reconciliation',
+      category: 'data',
+      categoryLabel: 'Data & Analytics',
+      featured: true,
+      tagline: 'Financial MRR Waterfall, Cohort NRR/GRR Retention, and Parametric Survival Modeling.',
+      problem: 'SaaS businesses face hidden MRR churn and revenue leakage across complex subscription lifecycles without automated audit reconciliations.',
+      solution: 'Constructed an advanced financial data pipeline and reconciliation engine analyzing MRR waterfalls, cohort retention metrics (NRR/GRR), and parametric survival models for customer lifetime churn risk.',
+      bullets: [
+        'Modeled monthly recurring revenue (MRR) waterfalls reconciling new, expansion, contraction, and churn ARR',
+        'Engineered cohort-based Net Revenue Retention (NRR) and Gross Revenue Retention (GRR) heatmaps',
+        'Implemented parametric survival analysis (Weibull/Cox Proportional Hazards) forecasting customer churn probability'
+      ],
+      technologies: ['Python', 'PostgreSQL', 'Pandas', 'Lifelines', 'Financial Analytics', 'Matplotlib'],
+      impact: 'Pinpointed revenue leakage vectors and customer churn trajectories across subscription cohorts',
+      github: 'https://github.com/DEEPAK21072005/saas-revenue-leakage-audit',
+      demo: 'https://github.com/DEEPAK21072005/saas-revenue-leakage-audit',
+      image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=600&auto=format&fit=crop'
+    },
+    {
+      id: 'excel-data-analysis',
+      title: 'Excel Data Analytics & Financial Modeling',
+      category: 'data',
+      categoryLabel: 'Data & Analytics',
+      featured: false,
+      tagline: 'Comprehensive portfolio of advanced Excel data modeling, pivot tables, and KPI dashboards.',
+      problem: 'Enterprise decision makers require fast, reliable spreadsheet models and dynamic visual dashboards from raw transactional datasets.',
+      solution: 'Engineered automated Excel dashboards, multi-variable pivot tables, sales & profit financial models, and executive KPI summaries.',
+      bullets: [
+        'Constructed complex multi-sheet financial models using advanced lookup and dynamic array formulas',
+        'Created dynamic interactive pivot dashboards summarizing transactional sales and profitability trends',
+        'Streamlined reporting processes through automated calculation models and clean visual formatting'
+      ],
+      technologies: ['Microsoft Excel', 'Data Modeling', 'Pivot Tables', 'Formulas & VLOOKUP/XLOOKUP', 'KPI Dashboards'],
+      impact: 'Streamlined corporate data reporting and automated manual spreadsheet calculations',
+      github: 'https://github.com/DEEPAK21072005/Excel-Data-Analysis-Journey',
+      demo: 'https://github.com/DEEPAK21072005/Excel-Data-Analysis-Journey',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop'
     }
   ],
 
@@ -684,6 +764,15 @@ export const ResumeData = {
       category: 'Software Engineering',
       date: '2024',
       file: '/assets/certificates/JP-Morgan/Jp Moragan software engineering job simulation.pdf',
+      badge: 'JP Morgan Forage'
+    },
+    {
+      id: 'jpmorgan-ib',
+      title: 'JP Morgan Investment Banking Job Simulation',
+      issuer: 'JP Morgan',
+      category: 'Finance',
+      date: '2024',
+      file: '/assets/internships/JP MORGAN INTERNSHIP CERTIFICATE.pdf',
       badge: 'JP Morgan Forage'
     },
 

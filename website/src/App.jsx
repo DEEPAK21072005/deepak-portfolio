@@ -31,7 +31,10 @@ export default function App() {
     const saved = localStorage.getItem('atlas_projects');
     if (saved) {
       try {
-        return JSON.parse(saved);
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length >= ResumeData.projects.length) {
+          return parsed;
+        }
       } catch (e) {
         return ResumeData.projects;
       }
@@ -44,7 +47,10 @@ export default function App() {
     const saved = localStorage.getItem('atlas_certifications');
     if (saved) {
       try {
-        return JSON.parse(saved);
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length >= ResumeData.certifications.length) {
+          return parsed;
+        }
       } catch (e) {
         return ResumeData.certifications;
       }

@@ -27,7 +27,7 @@ export const experiences = [
       'Collaborated on practical solutions promoting corporate sustainability and environmental responsibility'
     ],
     technologies: ['Data Analytics', 'Sustainability Reporting', 'GHG Modeling', 'Excel', 'Energy Transition'],
-    certificate: '/assets/internships/Shell Green Skills certificate.pdf'
+    certificate: '/assets/internships/Shell internship.pdf'
   },
   {
     id: 'ibm-skillsbuild',

@@ -45,7 +45,7 @@ export const projects = [
     impact: 'Achieved 89%+ classification accuracy across multi-class emotion datasets.',
     learnings: 'Deepened knowledge of text preprocessing, tokenization, lemmatization, and model evaluation.',
     github: 'https://github.com/DEEPAK21072005/Emotion-Detection-Using-NLP',
-    demo: null
+    demo: 'https://emotion-lens-deepak.vercel.app'
   },
   {
     id: 'gesture-control',
@@ -77,11 +77,11 @@ export const projects = [
     category: 'web',
     problem: 'Users need a simple, intuitive dashboard to track personal finances, categorizing income and expenses effortlesly.',
     solution: 'Designed and developed a responsive financial management app featuring dynamic balance calculations and categorical filtering.',
-    technologies: ['JavaScript', 'HTML5', 'CSS3', 'Chart.js', 'Local Storage'],
+    technologies: ['TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Chart.js', 'Local Storage'],
     impact: 'Helps users gain full visibility into spending habits with zero latency and offline persistence.',
     learnings: 'Strengthened state management, dynamic DOM rendering, and client-side storage persistence.',
     github: 'https://github.com/DEEPAK21072005/Expense-Tracker-App-',
-    demo: null
+    demo: 'https://expense-tracker-pro-lime.vercel.app'
   },
   {
     id: 'dragon-cursor',
@@ -97,15 +97,15 @@ export const projects = [
   },
   {
     id: 'express-crud',
-    title: 'Express CRUD API Engine',
+    title: 'NexusCRUD Pro — Enterprise RESTful Engine & Dashboard',
     category: 'web',
     problem: 'Scalable backend services require robust architectural patterns for RESTful resource management and error handling.',
     solution: 'Architected a modular Express.js backend API featuring strict route validation, middleware pipeline, and clean JSON endpoints.',
     technologies: ['Node.js', 'Express.js', 'REST APIs', 'JavaScript'],
     impact: 'Demonstrated clean separation of concerns and production-ready API routing patterns.',
     learnings: 'Mastered middleware chains, HTTP response status standardization, and request body parsing.',
-    github: 'https://github.com/DEEPAK21072005/express-crud-experiment',
-    demo: null
+    github: 'https://github.com/DEEPAK21072005/NexusCRUD-Pro',
+    demo: 'https://express-crud-experiment.vercel.app'
   },
   {
     id: 'todo-react',
@@ -152,8 +152,8 @@ export const projects = [
     technologies: ['Python', 'scikit-learn', 'NLP', 'Pandas'],
     impact: 'Achieved high precision in flagging sensationalized and unverified news content.',
     learnings: 'Evaluated confusion matrices, ROC-AUC curves, and text feature selection techniques.',
-    github: 'https://github.com/DEEPAK21072005/Emotion-Detection-Using-NLP',
-    demo: null
+    github: 'https://github.com/DEEPAK21072005/Fake-News-Detector',
+    demo: 'https://veritas-ai-murex.vercel.app'
   },
   {
     id: 'jarvis-voice-assistant',
@@ -180,6 +180,54 @@ export const projects = [
     demo: null
   },
   {
+    id: 'blind-drop-x',
+    title: 'Blind Drop X — Official Promo Hub',
+    category: 'web',
+    problem: 'Users need secure, zero-knowledge ephemeral messaging with a clean, trustworthy APK download and promotional portal.',
+    solution: 'Engineered the official landing page and APK distribution platform for Blind Drop X, featuring zero-knowledge architecture details, responsive dark-mode UI, and secure APK download links.',
+    technologies: ['JavaScript', 'React', 'Tailwind CSS', 'Vite', 'Vercel'],
+    impact: 'Provided a seamless, high-conversion landing page and verified download portal for ephemeral messaging users.',
+    learnings: 'Mastered high-converting landing page design, APK distribution workflows, and performance optimization.',
+    github: 'https://github.com/DEEPAK21072005/blind-drop-x-promo',
+    demo: 'https://blind-drop-x-promo.vercel.app'
+  },
+  {
+    id: 'komorebi-tasks',
+    title: 'Komorebi Tasks',
+    category: 'web',
+    problem: 'Traditional task managers are cluttered and distracting, lacking mindful aesthetics and serene workflow organization.',
+    solution: 'Designed and engineered Komorebi Tasks — a minimalist, Japanese aesthetic-inspired task architecture combining serene minimalism, priority scheduling, and local persistence.',
+    technologies: ['React', 'Vite', 'Tailwind CSS', 'LocalStorage', 'Lucide Icons'],
+    impact: 'Delivered a distraction-free, mindful productivity interface with instant sub-millisecond local synchronization.',
+    learnings: 'Implemented minimalist design systems, custom keyboard shortcuts, and state-preserving offline storage.',
+    github: 'https://github.com/DEEPAK21072005/komorebi-app',
+    demo: 'https://komorebi-tasks.vercel.app'
+  },
+  {
+    id: 'saas-revenue-leakage',
+    title: 'SaaS Revenue Leakage & Subscription Lifecycle Reconciliation',
+    category: 'data',
+    problem: 'SaaS businesses face hidden MRR churn and revenue leakage across complex subscription lifecycles without automated audit reconciliations.',
+    solution: 'Constructed an advanced financial data pipeline and reconciliation engine analyzing MRR waterfalls, cohort retention metrics (NRR/GRR), and parametric survival models for customer lifetime churn risk.',
+    technologies: ['Python', 'PostgreSQL', 'Pandas', 'Lifelines', 'Financial Analytics', 'Matplotlib'],
+    impact: 'Uncovered revenue leakage vectors and pinpointed high-risk cohort churn patterns through parametric survival modeling.',
+    learnings: 'Mastered financial cohort modeling, MRR bridge waterfalls, and parametric survival curve estimation.',
+    github: 'https://github.com/DEEPAK21072005/saas-revenue-leakage-audit',
+    demo: 'https://github.com/DEEPAK21072005/saas-revenue-leakage-audit'
+  },
+  {
+    id: 'excel-data-analysis',
+    title: 'Excel Data Analytics & Financial Modeling',
+    category: 'data',
+    problem: 'Enterprise decision makers require fast, reliable spreadsheet models and dynamic visual dashboards from raw transactional datasets.',
+    solution: 'Engineered automated Excel dashboards, multi-variable pivot tables, sales & profit financial models, and executive KPI summaries.',
+    technologies: ['Microsoft Excel', 'Data Modeling', 'Pivot Tables', 'Formulas & VLOOKUP/XLOOKUP', 'KPI Dashboards'],
+    impact: 'Streamlined business reporting and automated manual spreadsheet calculations with dynamic summaries.',
+    learnings: 'Advanced expertise in complex multi-condition formula modeling, dynamic named ranges, and executive charting.',
+    github: 'https://github.com/DEEPAK21072005/Excel-Data-Analysis-Journey',
+    demo: 'https://github.com/DEEPAK21072005/Excel-Data-Analysis-Journey'
+  },
+  {
     id: 'deepak-portfolio',
     title: 'Project Atlas Portfolio',
     category: 'web',
@@ -188,7 +236,7 @@ export const projects = [
     technologies: ['Vite', 'Vanilla JS', 'GSAP', 'CSS Variables', 'HTML5'],
     impact: 'Delivered a premium, recruiter-grade portfolio experience with 100% lighthouse targets.',
     learnings: 'Architected component-based vanilla web architecture, design token systems, and fine-tuned micro-interactions.',
-    github: 'https://github.com/DEEPAK21072005',
+    github: 'https://github.com/DEEPAK21072005/deepak-portfolio',
     demo: '#'
   }
 ];
