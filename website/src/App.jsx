@@ -32,7 +32,7 @@ export default function App() {
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed) && parsed.length >= ResumeData.projects.length) {
+        if (Array.isArray(parsed) && parsed.length >= ResumeData.projects.length && parsed[0]?.id === ResumeData.projects[0]?.id) {
           return parsed;
         }
       } catch (e) {

@@ -99,24 +99,25 @@ export const ResumeData = {
 
   projects: [
     {
-      id: 'emotion-lens',
-      title: 'EmotionLens — Sentiment & Emotion Classifier',
-      category: 'ai',
-      categoryLabel: 'AI & Machine Learning',
+      id: 'saas-revenue-leakage',
+      title: 'SaaS Revenue Leakage & Subscription Lifecycle Reconciliation',
+      category: 'data',
+      categoryLabel: 'Data & Analytics',
       featured: true,
-      tagline: 'Real-time NLP sentiment and multi-class emotion classification engine.',
-      problem: 'Businesses struggle to monitor user emotion and sentiment trends across large unstructured text channels in real time.',
-      solution: 'Developed an NLP-driven sentiment and emotion detection pipeline using NLTK, TF-IDF, and scikit-learn classifiers with real-time text analysis and visual emotion confidence breakdown.',
+      tagline: 'Financial MRR Waterfall, Cohort NRR/GRR Retention, and Parametric Survival Modeling.',
+      problem: 'SaaS enterprises lose millions to hidden MRR churn and failed dunning cycles across complex subscription lifecycles without automated audit reconciliations.',
+      solution: 'Architected an end-to-end financial data pipeline in PostgreSQL and Python reconciling continuous date-spined MRR waterfalls, cohort retention metrics (NRR/GRR), and semi-parametric Cox Proportional Hazards survival models across 63,000+ billing episodes to recapture $3.41M ARR.',
       bullets: [
-        'Trained multi-class classification models delivering 89%+ accuracy on nuanced sentiment datasets',
-        'Built tokenization, lemmatization, and TF-IDF feature pipelines for robust text normalization',
-        'Provides real-time confidence scores for 6 core emotions (Joy, Sadness, Anger, Fear, Love, Surprise)'
+        'Reconstructed continuous date-spined MRR waterfalls reconciling New, Expansion, Contraction, and Churn ARR in PostgreSQL 16',
+        'Fitted Kaplan-Meier & Cox Proportional Hazards survival models evaluating recovery velocity and churn hazard across 63,135 billing episodes',
+        'Simulated algorithmic dunning policy recapturing +$3.41M ARR/yr (-44% involuntary churn reduction) with a 40.1x Year-1 ROI multiple',
+        'Engineered 2-page Power BI executive suite with 16 production DAX measures and interactive What-If scenario modeling'
       ],
-      technologies: ['Python', 'NLP', 'NLTK', 'scikit-learn', 'Pandas', 'Streamlit'],
-      impact: '89%+ Classification Accuracy on multi-class emotional text benchmarks',
-      github: 'https://github.com/DEEPAK21072005/Emotion-Detection-Using-NLP',
-      demo: 'https://emotion-lens-deepak.vercel.app',
-      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=600&auto=format&fit=crop'
+      technologies: ['Python', 'PostgreSQL 16', 'Pandas', 'Lifelines', 'Power BI / DAX', 'Docker', 'Statistical Modeling'],
+      impact: '+$3.41M Annual ARR Recaptured & -44% Involuntary Churn via Cox Survival Modeling with 40.1x Year-1 ROI',
+      github: 'https://github.com/DEEPAK21072005/saas-revenue-leakage-audit',
+      demo: 'https://github.com/DEEPAK21072005/saas-revenue-leakage-audit',
+      image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=600&auto=format&fit=crop'
     },
     {
       id: 'ai-career-assistant',
@@ -129,8 +130,8 @@ export const ResumeData = {
       solution: 'Built an intelligent CareerBot using LLMs and RAG that analyzes resumes against target roles, extracts key skill gaps, and delivers customized career strategies.',
       bullets: [
         'Implemented semantic vector chunking with ChromaDB vector store and LangChain orchestration',
-        'Automated skill-gap gap identification with 70% faster analysis compared to manual resume reviews',
-        'Generated dynamic interview questions tailored to candidates specific project experiences'
+        'Automated skill-gap identification with 70% faster analysis compared to manual resume reviews',
+        'Generated dynamic interview questions tailored to candidate project experiences'
       ],
       technologies: ['Python', 'LangChain', 'RAG', 'LLMs', 'OpenAI API', 'Vector DB'],
       impact: 'Accelerated job alignment analysis by 70% with tailored interview roadmaps',
@@ -138,7 +139,6 @@ export const ResumeData = {
       demo: 'https://github.com/DEEPAK21072005/CareerBot-AI-Assistant',
       image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop'
     },
-
     {
       id: 'ghg-emissions-dashboard',
       title: 'GHG Emissions Prediction Dashboard',
@@ -160,24 +160,64 @@ export const ResumeData = {
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop'
     },
     {
-      id: 'gesture-control',
-      title: 'Gesture Control Interface',
+      id: 'emotion-lens',
+      title: 'EmotionLens — Sentiment & Emotion Classifier',
+      category: 'ai',
+      categoryLabel: 'AI & Machine Learning',
+      featured: true,
+      tagline: 'Real-time NLP sentiment and multi-class emotion classification engine.',
+      problem: 'Businesses struggle to monitor user emotion and sentiment trends across large unstructured text channels in real time.',
+      solution: 'Developed an NLP-driven sentiment and emotion detection pipeline using NLTK, TF-IDF, and scikit-learn classifiers with real-time text analysis and visual emotion confidence breakdown.',
+      bullets: [
+        'Trained multi-class classification models delivering 89%+ accuracy on nuanced sentiment datasets',
+        'Built tokenization, lemmatization, and TF-IDF feature pipelines for robust text normalization',
+        'Provides real-time confidence scores for 6 core emotions (Joy, Sadness, Anger, Fear, Love, Surprise)'
+      ],
+      technologies: ['Python', 'NLP', 'NLTK', 'scikit-learn', 'Pandas', 'Streamlit'],
+      impact: '89%+ Classification Accuracy on multi-class emotional text benchmarks',
+      github: 'https://github.com/DEEPAK21072005/Emotion-Detection-Using-NLP',
+      demo: 'https://emotion-lens-deepak.vercel.app',
+      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=600&auto=format&fit=crop'
+    },
+    {
+      id: 'fake-news-detection',
+      title: 'Automated Fake News Detector',
+      category: 'ai',
+      categoryLabel: 'AI & Machine Learning',
+      featured: true,
+      tagline: 'TF-IDF NLP machine learning model flagging misinformation and deceptive headlines.',
+      problem: 'Misinformation spreads quickly across social media requiring automated credibility verification.',
+      solution: 'Trained a machine learning classifier using TF-IDF vectorization to detect deceptive news articles and headlines.',
+      bullets: [
+        'Preprocessed uncurated news datasets through n-gram tokenization and stop-word removal',
+        'Trained PassiveAggressive and Logistic Regression classifiers evaluating confusion matrices',
+        'Achieved 91% precision in identifying sensationalized and factually inconsistent claims'
+      ],
+      technologies: ['Python', 'scikit-learn', 'NLP', 'TF-IDF', 'Pandas'],
+      impact: '91% Precision on identifying fake and sensationalized news content',
+      github: 'https://github.com/DEEPAK21072005/Fake-News-Detector',
+      demo: 'https://veritas-ai-murex.vercel.app',
+      image: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=600&auto=format&fit=crop'
+    },
+    {
+      id: 'korean-grammar-coach',
+      title: 'Korean Grammar Coach (Gemma-2B CLI)',
       category: 'ai',
       categoryLabel: 'AI & Machine Learning',
       featured: false,
-      tagline: 'Real-time computer vision system for touchless system and media navigation.',
-      problem: 'Touchless computer navigation is needed for hands-free interactions and immersive media playback.',
-      solution: 'Built a real-time computer vision system tracking hand landmarks to control video reels, volume, and media playback via gestures.',
+      tagline: 'Lightweight offline Korean grammar correction tool fine-tuned with Gemma 2B.',
+      problem: 'Language learners lack immediate, context-aware grammar explanation tools tailored to conversational Korean.',
+      solution: 'Fine-tuned Gemma-2B LLM into an interactive CLI tool that breaks down Korean sentence structures, honorifics, and grammatical particles.',
       bullets: [
-        'Utilized MediaPipe hand landmark detection tracking 21 3D hand coordinates in real-time',
-        'Implemented gesture recognition smoothing algorithms to eliminate false positive triggers',
-        'Controlled system volume, playback, and scroll navigation with sub-30ms execution'
+        'Fine-tuned lightweight Gemma-2B model for conversational Korean grammar diagnostics',
+        'Implemented offline bilingual explanations of honorifics and sentence particles',
+        'Optimized CLI prompt interface delivering sub-second response times'
       ],
-      technologies: ['Python', 'OpenCV', 'MediaPipe', 'PyAutoGUI'],
-      impact: 'Sub-30ms latency touchless media navigation on standard webcams',
-      github: 'https://github.com/DEEPAK21072005/Gesture-Controlled-Reels-Interface',
-      demo: 'https://github.com/DEEPAK21072005/Gesture-Controlled-Reels-Interface',
-      image: 'https://images.unsplash.com/photo-1507146426996-ef05306b995a?q=80&w=600&auto=format&fit=crop'
+      technologies: ['Python', 'Gemma-2B', 'PyTorch', 'Transformers', 'NLP'],
+      impact: 'Sub-second local grammar corrections with high accuracy on conversational datasets',
+      github: 'https://github.com/DEEPAK21072005/Korean-Grammar-Coach-Gemma-2B-CLI-Tool',
+      demo: 'https://github.com/DEEPAK21072005/Korean-Grammar-Coach-Gemma-2B-CLI-Tool',
+      image: 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=600&auto=format&fit=crop'
     },
     {
       id: 'air-draw',
@@ -200,44 +240,44 @@ export const ResumeData = {
       image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=600&auto=format&fit=crop'
     },
     {
-      id: 'expense-tracker',
-      title: 'Personal Financial Analytics Dashboard',
-      category: 'web',
-      categoryLabel: 'Web Development',
+      id: 'gesture-control',
+      title: 'Gesture Control Interface',
+      category: 'ai',
+      categoryLabel: 'AI & Machine Learning',
       featured: false,
-      tagline: 'Modern responsive financial management app with dynamic breakdown charts.',
-      problem: 'Users need a simple, intuitive dashboard to track personal finances, categorizing income and expenses effortlessly.',
-      solution: 'Designed and developed a responsive financial management app featuring dynamic balance calculations and categorical filtering.',
+      tagline: 'Real-time computer vision system for touchless system and media navigation.',
+      problem: 'Touchless computer navigation is needed for hands-free interactions and immersive media playback.',
+      solution: 'Built a real-time computer vision system tracking hand landmarks to control video reels, volume, and media playback via gestures.',
       bullets: [
-        'Integrated dynamic Chart.js visualizations for income vs expense category breakdowns',
-        'Utilized client-side localStorage for instant data persistence with zero backend latency',
-        'Built responsive transactions log with search, sort, and date-range filters'
+        'Utilized MediaPipe hand landmark detection tracking 21 3D hand coordinates in real-time',
+        'Implemented gesture recognition smoothing algorithms to eliminate false positive triggers',
+        'Controlled system volume, playback, and scroll navigation with sub-30ms execution'
       ],
-      technologies: ['TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Chart.js', 'LocalStorage'],
-      impact: '100% client-side privacy-first expense management with instant visual feedback',
-      github: 'https://github.com/DEEPAK21072005/Expense-Tracker-App-',
-      demo: 'https://expense-tracker-pro-lime.vercel.app',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop'
+      technologies: ['Python', 'OpenCV', 'MediaPipe', 'PyAutoGUI'],
+      impact: 'Sub-30ms latency touchless media navigation on standard webcams',
+      github: 'https://github.com/DEEPAK21072005/Gesture-Controlled-Reels-Interface',
+      demo: 'https://github.com/DEEPAK21072005/Gesture-Controlled-Reels-Interface',
+      image: 'https://images.unsplash.com/photo-1507146426996-ef05306b995a?q=80&w=600&auto=format&fit=crop'
     },
     {
-      id: 'dragon-cursor',
-      title: 'Dragon Cursor Ultimate Physics Engine',
+      id: 'blind-drop-x',
+      title: 'Blind Drop X — Official Promo Hub',
       category: 'web',
       categoryLabel: 'Web Development',
-      featured: false,
-      tagline: 'Interactive 60fps particle physics trailing canvas animation engine.',
-      problem: 'Standard web cursors lack engaging visual feedback for interactive gaming and creative portfolios.',
-      solution: 'Created a high-performance custom particle cursor effect featuring smooth drag physics and dynamic trailing canvas animations.',
+      featured: true,
+      tagline: 'Zero-Knowledge Ephemeral Communication & APK Distribution Portal.',
+      problem: 'Users need secure, zero-knowledge ephemeral messaging with a clean, trustworthy APK download and promotional portal.',
+      solution: 'Engineered the official landing page and APK distribution platform for Blind Drop X, featuring zero-knowledge architecture details, responsive dark-mode UI, and secure APK download links.',
       bullets: [
-        'Developed custom Verlet integration physics model for elastic dragon segment trailing',
-        'Optimized HTML5 2D Canvas rendering loop running smoothly at consistent 60 FPS',
-        'Implemented dynamic glowing chromatic particle trails responding to mouse speed'
+        'Engineered responsive zero-knowledge landing page with interactive feature breakdowns',
+        'Implemented secure direct APK download pipeline and release version telemetry',
+        'Optimized with Vite and Tailwind CSS for instant sub-second load times'
       ],
-      technologies: ['Vanilla JS', 'HTML5 Canvas', 'CSS Animations', 'Vector Physics'],
-      impact: 'Delivered fluid 60fps cursor interactions without degrading main thread performance',
-      github: 'https://github.com/DEEPAK21072005/Dragon-Cursor-Ultimate',
-      demo: 'https://github.com/DEEPAK21072005/Dragon-Cursor-Ultimate',
-      image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=600&auto=format&fit=crop'
+      technologies: ['JavaScript', 'React', 'Tailwind CSS', 'Vite', 'Vercel'],
+      impact: 'High-conversion landing portal for privacy-first ephemeral communication',
+      github: 'https://github.com/DEEPAK21072005/blind-drop-x-promo',
+      demo: 'https://blind-drop-x-promo.vercel.app',
+      image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=600&auto=format&fit=crop'
     },
     {
       id: 'express-crud',
@@ -260,24 +300,64 @@ export const ResumeData = {
       image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=600&auto=format&fit=crop'
     },
     {
-      id: 'todo-react',
-      title: 'React Task Management Engine',
+      id: 'expense-tracker',
+      title: 'Personal Financial Analytics Dashboard',
       category: 'web',
       categoryLabel: 'Web Development',
       featured: false,
-      tagline: 'Modern task productivity suite with declarative state management.',
-      problem: 'Daily task tracking requires instantaneous state updates, task filtering, and persistence.',
-      solution: 'Built a clean, modern Todo application in React utilizing component composition, custom hooks, and state management.',
+      tagline: 'Modern responsive financial management app with dynamic breakdown charts.',
+      problem: 'Users need a simple, intuitive dashboard to track personal finances, categorizing income and expenses effortlessly.',
+      solution: 'Designed and developed a responsive financial management app featuring dynamic balance calculations and categorical filtering.',
       bullets: [
-        'Built with declarative React component architecture and custom useLocalStorage hooks',
-        'Supported priority tags, category grouping, and active/completed toggle filters',
-        'Smooth CSS transition animations on task completion and deletion'
+        'Integrated dynamic Chart.js visualizations for income vs expense category breakdowns',
+        'Utilized client-side localStorage for instant data persistence with zero backend latency',
+        'Built responsive transactions log with search, sort, and date-range filters'
       ],
-      technologies: ['React', 'JavaScript', 'CSS Modules', 'LocalStorage'],
-      impact: 'Streamlined task organization with sub-millisecond local state synchronization',
-      github: 'https://github.com/DEEPAK21072005/react-todo-app',
-      demo: 'https://github.com/DEEPAK21072005/react-todo-app',
-      image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=600&auto=format&fit=crop'
+      technologies: ['TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Chart.js', 'LocalStorage'],
+      impact: '100% client-side privacy-first expense management with instant visual feedback',
+      github: 'https://github.com/DEEPAK21072005/Expense-Tracker-App-',
+      demo: 'https://expense-tracker-pro-lime.vercel.app',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop'
+    },
+    {
+      id: 'komorebi-tasks',
+      title: 'Komorebi Tasks',
+      category: 'web',
+      categoryLabel: 'Web Development',
+      featured: true,
+      tagline: 'Mindful, precision-crafted productivity and task management web application.',
+      problem: 'Traditional task managers are cluttered and distracting, lacking mindful aesthetics and serene workflow organization.',
+      solution: 'Designed and engineered Komorebi Tasks — a minimalist, Japanese aesthetic-inspired task architecture combining serene minimalism, priority scheduling, and local persistence.',
+      bullets: [
+        'Built with minimalist Japanese design philosophy prioritizing focus and mental clarity',
+        'Integrated client-side state preservation with instant offline synchronization',
+        'Engineered keyboard shortcuts, custom priority tags, and clean completion micro-animations'
+      ],
+      technologies: ['React', 'Vite', 'Tailwind CSS', 'LocalStorage', 'Lucide Icons'],
+      impact: 'Distraction-free, mindful task management with sub-millisecond local latency',
+      github: 'https://github.com/DEEPAK21072005/komorebi-app',
+      demo: 'https://komorebi-tasks.vercel.app',
+      image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=600&auto=format&fit=crop'
+    },
+    {
+      id: 'excel-data-analysis',
+      title: 'Excel Data Analytics & Financial Modeling',
+      category: 'data',
+      categoryLabel: 'Data & Analytics',
+      featured: false,
+      tagline: 'Comprehensive portfolio of advanced Excel data modeling, pivot tables, and KPI dashboards.',
+      problem: 'Enterprise decision makers require fast, reliable spreadsheet models and dynamic visual dashboards from raw transactional datasets.',
+      solution: 'Engineered automated Excel dashboards, multi-variable pivot tables, sales & profit financial models, and executive KPI summaries.',
+      bullets: [
+        'Constructed complex multi-sheet financial models using advanced lookup and dynamic array formulas',
+        'Created dynamic interactive pivot dashboards summarizing transactional sales and profitability trends',
+        'Streamlined reporting processes through automated calculation models and clean visual formatting'
+      ],
+      technologies: ['Microsoft Excel', 'Data Modeling', 'Pivot Tables', 'Formulas & VLOOKUP/XLOOKUP', 'KPI Dashboards'],
+      impact: 'Streamlined corporate data reporting and automated manual spreadsheet calculations',
+      github: 'https://github.com/DEEPAK21072005/Excel-Data-Analysis-Journey',
+      demo: 'https://github.com/DEEPAK21072005/Excel-Data-Analysis-Journey',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop'
     },
     {
       id: 'weather-forecast',
@@ -300,24 +380,44 @@ export const ResumeData = {
       image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=600&auto=format&fit=crop'
     },
     {
-      id: 'fake-news-detection',
-      title: 'Automated Fake News Detector',
-      category: 'ai',
-      categoryLabel: 'AI & Machine Learning',
+      id: 'dragon-cursor',
+      title: 'Dragon Cursor Ultimate Physics Engine',
+      category: 'web',
+      categoryLabel: 'Web Development',
       featured: false,
-      tagline: 'TF-IDF NLP machine learning model flagging misinformation and deceptive headlines.',
-      problem: 'Misinformation spreads quickly across social media requiring automated credibility verification.',
-      solution: 'Trained a machine learning classifier using TF-IDF vectorization to detect deceptive news articles and headlines.',
+      tagline: 'Interactive 60fps particle physics trailing canvas animation engine.',
+      problem: 'Standard web cursors lack engaging visual feedback for interactive gaming and creative portfolios.',
+      solution: 'Created a high-performance custom particle cursor effect featuring smooth drag physics and dynamic trailing canvas animations.',
       bullets: [
-        'Preprocessed uncurated news datasets through n-gram tokenization and stop-word removal',
-        'Trained PassiveAggressive and Logistic Regression classifiers evaluating confusion matrices',
-        'Achieved 91% precision in identifying sensationalized and factually inconsistent claims'
+        'Developed custom Verlet integration physics model for elastic dragon segment trailing',
+        'Optimized HTML5 2D Canvas rendering loop running smoothly at consistent 60 FPS',
+        'Implemented dynamic glowing chromatic particle trails responding to mouse speed'
       ],
-      technologies: ['Python', 'scikit-learn', 'NLP', 'TF-IDF', 'Pandas'],
-      impact: '91% Precision on identifying fake and sensationalized news content',
-      github: 'https://github.com/DEEPAK21072005/Fake-News-Detector',
-      demo: 'https://veritas-ai-murex.vercel.app',
-      image: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=600&auto=format&fit=crop'
+      technologies: ['Vanilla JS', 'HTML5 Canvas', 'CSS Animations', 'Vector Physics'],
+      impact: 'Delivered fluid 60fps cursor interactions without degrading main thread performance',
+      github: 'https://github.com/DEEPAK21072005/Dragon-Cursor-Ultimate',
+      demo: 'https://github.com/DEEPAK21072005/Dragon-Cursor-Ultimate',
+      image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=600&auto=format&fit=crop'
+    },
+    {
+      id: 'todo-react',
+      title: 'React Task Management Engine',
+      category: 'web',
+      categoryLabel: 'Web Development',
+      featured: false,
+      tagline: 'Modern task productivity suite with declarative state management.',
+      problem: 'Daily task tracking requires instantaneous state updates, task filtering, and persistence.',
+      solution: 'Built a clean, modern Todo application in React utilizing component composition, custom hooks, and state management.',
+      bullets: [
+        'Built with declarative React component architecture and custom useLocalStorage hooks',
+        'Supported priority tags, category grouping, and active/completed toggle filters',
+        'Smooth CSS transition animations on task completion and deletion'
+      ],
+      technologies: ['React', 'JavaScript', 'CSS Modules', 'LocalStorage'],
+      impact: 'Streamlined task organization with sub-millisecond local state synchronization',
+      github: 'https://github.com/DEEPAK21072005/react-todo-app',
+      demo: 'https://github.com/DEEPAK21072005/react-todo-app',
+      image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=600&auto=format&fit=crop'
     },
     {
       id: 'jarvis-voice-assistant',
@@ -396,86 +496,6 @@ export const ResumeData = {
       github: 'https://github.com/DEEPAK21072005/deepak-portfolio',
       demo: '#',
       image: 'https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=600&auto=format&fit=crop'
-    },
-    {
-      id: 'blind-drop-x',
-      title: 'Blind Drop X — Official Promo Hub',
-      category: 'web',
-      categoryLabel: 'Web Development',
-      featured: true,
-      tagline: 'Zero-Knowledge Ephemeral Communication & APK Distribution Portal.',
-      problem: 'Users need secure, zero-knowledge ephemeral messaging with a clean, trustworthy APK download and promotional portal.',
-      solution: 'Engineered the official landing page and APK distribution platform for Blind Drop X, featuring zero-knowledge architecture details, responsive dark-mode UI, and secure APK download links.',
-      bullets: [
-        'Engineered responsive zero-knowledge landing page with interactive feature breakdowns',
-        'Implemented secure direct APK download pipeline and release version telemetry',
-        'Optimized with Vite and Tailwind CSS for instant sub-second load times'
-      ],
-      technologies: ['JavaScript', 'React', 'Tailwind CSS', 'Vite', 'Vercel'],
-      impact: 'High-conversion landing portal for privacy-first ephemeral communication',
-      github: 'https://github.com/DEEPAK21072005/blind-drop-x-promo',
-      demo: 'https://blind-drop-x-promo.vercel.app',
-      image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=600&auto=format&fit=crop'
-    },
-    {
-      id: 'komorebi-tasks',
-      title: 'Komorebi Tasks',
-      category: 'web',
-      categoryLabel: 'Web Development',
-      featured: true,
-      tagline: 'Mindful, precision-crafted productivity and task management web application.',
-      problem: 'Traditional task managers are cluttered and distracting, lacking mindful aesthetics and serene workflow organization.',
-      solution: 'Designed and engineered Komorebi Tasks — a minimalist, Japanese aesthetic-inspired task architecture combining serene minimalism, priority scheduling, and local persistence.',
-      bullets: [
-        'Built with minimalist Japanese design philosophy prioritizing focus and mental clarity',
-        'Integrated client-side state preservation with instant offline synchronization',
-        'Engineered keyboard shortcuts, custom priority tags, and clean completion micro-animations'
-      ],
-      technologies: ['React', 'Vite', 'Tailwind CSS', 'LocalStorage', 'Lucide Icons'],
-      impact: 'Distraction-free, mindful task management with sub-millisecond local latency',
-      github: 'https://github.com/DEEPAK21072005/komorebi-app',
-      demo: 'https://komorebi-tasks.vercel.app',
-      image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=600&auto=format&fit=crop'
-    },
-    {
-      id: 'saas-revenue-leakage',
-      title: 'SaaS Revenue Leakage & Subscription Lifecycle Reconciliation',
-      category: 'data',
-      categoryLabel: 'Data & Analytics',
-      featured: true,
-      tagline: 'Financial MRR Waterfall, Cohort NRR/GRR Retention, and Parametric Survival Modeling.',
-      problem: 'SaaS businesses face hidden MRR churn and revenue leakage across complex subscription lifecycles without automated audit reconciliations.',
-      solution: 'Constructed an advanced financial data pipeline and reconciliation engine analyzing MRR waterfalls, cohort retention metrics (NRR/GRR), and parametric survival models for customer lifetime churn risk.',
-      bullets: [
-        'Modeled monthly recurring revenue (MRR) waterfalls reconciling new, expansion, contraction, and churn ARR',
-        'Engineered cohort-based Net Revenue Retention (NRR) and Gross Revenue Retention (GRR) heatmaps',
-        'Implemented parametric survival analysis (Weibull/Cox Proportional Hazards) forecasting customer churn probability'
-      ],
-      technologies: ['Python', 'PostgreSQL', 'Pandas', 'Lifelines', 'Financial Analytics', 'Matplotlib'],
-      impact: 'Pinpointed revenue leakage vectors and customer churn trajectories across subscription cohorts',
-      github: 'https://github.com/DEEPAK21072005/saas-revenue-leakage-audit',
-      demo: 'https://github.com/DEEPAK21072005/saas-revenue-leakage-audit',
-      image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=600&auto=format&fit=crop'
-    },
-    {
-      id: 'excel-data-analysis',
-      title: 'Excel Data Analytics & Financial Modeling',
-      category: 'data',
-      categoryLabel: 'Data & Analytics',
-      featured: false,
-      tagline: 'Comprehensive portfolio of advanced Excel data modeling, pivot tables, and KPI dashboards.',
-      problem: 'Enterprise decision makers require fast, reliable spreadsheet models and dynamic visual dashboards from raw transactional datasets.',
-      solution: 'Engineered automated Excel dashboards, multi-variable pivot tables, sales & profit financial models, and executive KPI summaries.',
-      bullets: [
-        'Constructed complex multi-sheet financial models using advanced lookup and dynamic array formulas',
-        'Created dynamic interactive pivot dashboards summarizing transactional sales and profitability trends',
-        'Streamlined reporting processes through automated calculation models and clean visual formatting'
-      ],
-      technologies: ['Microsoft Excel', 'Data Modeling', 'Pivot Tables', 'Formulas & VLOOKUP/XLOOKUP', 'KPI Dashboards'],
-      impact: 'Streamlined corporate data reporting and automated manual spreadsheet calculations',
-      github: 'https://github.com/DEEPAK21072005/Excel-Data-Analysis-Journey',
-      demo: 'https://github.com/DEEPAK21072005/Excel-Data-Analysis-Journey',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop'
     }
   ],
 
